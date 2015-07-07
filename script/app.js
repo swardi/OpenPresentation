@@ -87,7 +87,7 @@ OpenPresentationApp.run(["$rootScope", "settings", "$state",  "$location",  "set
                 event.preventDefault(); 
                 UserService.doLogin().then(function(){
                     $rootScope.$emit('userLoggedIn', {});  
-                    if($location.path() === '') $location.path ("/posts" );
+                    if($location.path() === '') $location.path ("/dashboard" );
                     $state.go( $location.path().substring(1), null, { reload: true });
                 },function(){
                     $rootScope.$emit('userLoggedOut', {});

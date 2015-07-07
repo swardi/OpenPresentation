@@ -17,9 +17,9 @@ angular.module('Authentication').controller('LoginController', ["$rootScope", "$
     }
         UserService.setCredentials($scope.username, $scope.password, $scope.rememberMe); 
         UserService.doLogin().then( function(response) {
-            if(response.user_id) { 
+            if(response.user) { 
                 $scope.error=false;
-                UserService.setAuthenticated(response); 
+                UserService.setAuthenticated(response.user); 
                 $rootScope.$emit('userLoggedIn', {});
             } else {
                UserService.setAuthenticated(false);

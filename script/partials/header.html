@@ -3,8 +3,8 @@
 	<!-- BEGIN LOGO -->
 	
 	<div class="page-logo">
-		<a href="#/">  
-		<img src="images/logo.png" alt="logo" class="logo-default"/>
+		<a href="#/" class="logo-default">  
+		<h3> Open Presenation
 		</a>
 	 
 	</div>
@@ -25,12 +25,19 @@
 			<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 			<li class="dropdown dropdown-user">
 				<a href="#" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
-				<img alt="" class="img-circle" ng-src="{{user.photoSrc|| '//:0' }}"/>
+				 
 				<span class="username username-hide-on-mobile">
 				{{ user.first_name }} </span>
 				<i class="fa fa-angle-down"></i>
 				</a>
 				<ul class="dropdown-menu dropdown-menu-default">
+						<li>
+							<a href="#/newPresentation">
+							<i class="icon-user"></i> Create Presentation </a>
+						</li>
+ 
+
+
 						<li>
 							<a href="#/profile">
 							<i class="icon-user"></i> My Profile </a>

@@ -3,6 +3,7 @@ OpenPresentationApp.controller('AppController', ['$scope', '$rootScope', '$locat
      $scope.page =  {} ;
      $scope.page.showLogin = !UserService.isAuthenticated();
      $rootScope.loadingMessage = null;
+     
     $rootScope.$on('userLoggedIn', function (event, data) {
         if($location.path() === '/login')
           $location.path('/dashboard');
@@ -25,7 +26,6 @@ OpenPresentationApp.controller('HeaderController', ['$scope', '$rootScope',  'Us
     $rootScope.$on('userLoggedIn', function (event, data) {
       $scope.page.showLogin=false;
       $scope.user =   UserService.getCurrentUser(); 
-      $scope.user.photoSrc=settings.serverURL + "/photo/get/profile/"+$scope.user.user_id;
       
     });
 
