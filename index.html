@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js" data-ng-app="OpenPresentationApp"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js" data-ng-app="OpenPresentationApp"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"   data-ng-app="OpenPresentationApp" >
+<!--<![endif]-->
+	<head>
+		<title data-ng-bind="'OpenPresentationApp  | ' + $state.current.data.pageTitle"></title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<meta content="" name="description"/>
+		<meta content="" name="author"/>
+
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="bower_components/morris.js/morris.css" /> 
+		<!-- endbower -->
+
+ 
+		<link href="bower_components/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>  
+
+		<!-- BEGIN THEME STYLES -->
+		<!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+		<link href="css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+		<link href="css/plugins.css" rel="stylesheet" type="text/css"/>
+		<link href="css/layout.css" rel="stylesheet" type="text/css"/>
+		<link href="css/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
+		<link href="css/custom.css" rel="stylesheet" type="text/css"/>
+		<link href="css/login.css" rel="stylesheet" type="text/css"/>
+		<!-- END THEME STYLES -->
+		<link rel="shortcut icon" href="favicon.ico"/>
+	</head>
+
+	<body ng-controller="AppController" ng-class="{'login': page.showLogin}" class="page-header-fixed page-sidebar-closed-hide-logo page-quick-sidebar-over-content page-on-load" >
+		<div  class="loadingMessage" id="loadingMessage"> Loading </div>
+		<div ng-spinner-bar class="page-spinner-bar"  >
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+
+	 
+		<div class="clearfix"></div>
+		<div class="page-container" >
+			<div ng-hide="page.showLogin"  data-ng-include="'script/partials/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
+			<div class="page-content-wrapper">
+				<div ng-class="{'page-content':!page.showLogin}">
+					<div ui-view class="fade-in-up"> </div> 
+				</div>	
+			</div>
+			<!-- END CONTENT -->
+		</div>
+
+		<div ng-hide="page.showLogin" data-ng-include="'script/partials/footer.html'" data-ng-controller="FooterController" class="page-footer"> </div>
+
+ 
+		
+		<script src="components/metronic.js"></script>
+		<script src="components/layout.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="bower_components/respond.min.js"></script>
+		<script src="bower_components/excanvas.min.js"></script> 
+		<![endif]-->
+
+ 
+ 
+		
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script> 
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script> 
+		<script src="bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script> 
+		<script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+		<script src="bower_components/angularjs/angular.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+		<script src="bower_components/angular-touch/angular-touch.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/blockUI/jquery.blockUI.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script> 
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/moment/moment.js"></script>  
+		<script src="bower_components/morris.js/morris.js"></script> 
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/crypto-js/crypto-js.js"></script> 
+		<script src="bower_components/crypto-js/md5.js"></script>  
+		<script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script> 
+		<!-- endbower -->
+	   
+		<!-- include: "type": "js", "files": "js/**/*.js" -->
+		<script src="script/app.js"></script>
+		<script src="script/directives.js"></script> 
+		<script src="script/modules/user/LoginController.js"></script> 
+		<script src="script/modules/user/service.js"></script> 
+		<script src="script/modules/dashboard/DashboardController.js"></script>
+		<script src="script/modules/data/service.js"></script>
+		<script src="script/modules/data/localStorage.js"></script>
+		<script src="script/modules/home/controllers.js"></script>
+		<script src="script/modules/home/service.js"></script> 
+
+
+		
+		<!-- /include -->
+ 
+
+	</body>
+</html>

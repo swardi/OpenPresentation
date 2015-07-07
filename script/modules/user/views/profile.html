@@ -1,0 +1,132 @@
+<h3 class="page-title">
+			My profile 
+			</h3>
+
+
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Profile</a>
+		</li>
+	</ul>
+	 
+</div>
+
+
+<div class="portlet box blue " >
+    <div class="portlet-title">
+    <div class="caption">
+		<i class="icon-settings"></i> Edit profile
+	</div>
+    </div>
+	<div class="portlet-body form">
+		<form name="editProfileForm" class="form-horizontal form-bordered"  method="POST" >
+		 
+
+		<div class="form-body">
+		
+		 <div class="alert alert-danger display-hide" style="display: block;" ng-show="error">
+		   <span class="close" ng-click="error=false">&times;</span>
+		   <span> There was an error updating your profile.</span>
+  		</div>
+
+  		 <div class="alert alert-success display-hide" style="display: block;" ng-show="success" >
+		   <span class="close" ng-click="success=false">&times;</span>
+		   <span>  Your profile updated successfully</span>
+  		</div>
+
+
+		<div class="form-group">
+			<label class="control-label col-md-3">Username</label>
+			<div class="col-md-9">
+				<div class="input-group" style="text-align:left">
+					<input type="text"  placeholder="Username" class="form-control"   ng-model="user.username" required>
+					<span class="input-group-btn" ng-click="checkUsernameAvailability()" >
+					<a href="javascript:;" class="btn green"  >
+					<i class="fa fa-check"></i> Check </a>
+					</span>
+				</div>
+				<div class="help-block" ng-show="user.usernameAvailable">
+					  Username is  available
+				</div>
+				<div class="help-block" ng-show="user.usernameNotAvailable">
+					  Username is not available
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-md-3">First Name</label>
+			<div class="col-md-9">
+				<input type="text" placeholder="First Name" class="form-control"  ng-model="user.first_name" required>
+			 
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-md-3">Email</label>
+			<div class="col-md-9"> 
+				<div class="input-group" style="text-align:left">
+					<input type="text"  placeholder="Email" class="form-control"  ng-model="user.email" required>
+					<span class="input-group-btn" ng-click="checkEmailAvailability()">
+					<a href="javascript:;" class="btn green"  >
+					<i class="fa fa-check"></i> Check </a>
+					</span>
+				</div>
+				<div class="help-block" ng-show="user.emailNotAvailable">
+					  Email is not available
+				</div>
+				<div class="help-block" ng-show="user.emailAvailable">
+					  Email is  available
+				</div>
+			</div>			 
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-md-3">City</label>
+			<div class="col-md-9">
+				<input type="text" placeholder="City" class="form-control"  ng-model="user.city" capitalize-first>
+			 
+			</div>
+		</div>
+
+	
+		<div class="form-group">
+			<label class="control-label col-md-3">About Me </label>
+			<div class="col-md-9">
+				<input type="text" placeholder="About me" class="form-control"  ng-model="user.about_me" >
+			 
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="control-label col-md-3">Website </label>
+			<div class="col-md-9">
+				<input type="text" placeholder="Website" class="form-control"  ng-model="user.website" >
+			 
+			</div>
+		</div>
+<div class="form-actions">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-offset-3 col-md-9">
+							<button type="submit" class="btn green"  ng-click="updateProfile()" ng-disabled="editProfileForm.$invalid"><i class="fa fa-check" ></i> Submit</button>
+							<button type="button" class="btn default">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+	</form>
+	</div>
+</div>
+		
