@@ -7,11 +7,13 @@ angular.module('Data').factory('DataService', ['settings',   '$http', 'LoadingMe
   return {
     
      InvokeService : function (method, url, data, successCallback, errorCallback) {
+      
        $http({
           method : method,
           url:url,
           data:data
        }).success(function(response) {
+      
         successCallback(response);
        }).error(function(error){
         errorCallback(error);

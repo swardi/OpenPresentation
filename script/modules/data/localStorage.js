@@ -24,4 +24,4 @@ angular.module('Data').factory('LocalStorageService',['$q','$timeout', function(
             return $.removeCookie(name);
         }				
 	return storage;
-}])
+}]);

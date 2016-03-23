@@ -323,7 +323,7 @@ Page Header
 /* Page sidebar */
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover,
 .page-sidebar {
-  background-color: #364150;
+    background-color: #222;
   /* Default sidebar */
   /* light sidebar */
   /* Sidebar search */
@@ -428,7 +428,7 @@ Page Header
 }
 .page-sidebar-closed .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu:hover .sub-menu, .page-sidebar-closed
 .page-sidebar .page-sidebar-menu:hover .sub-menu {
-  background-color: #364150;
+    background-color: #222;/*my set*/
 }
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li > a,
 .page-sidebar .page-sidebar-menu .sub-menu > li > a {
@@ -525,7 +525,7 @@ Page Header
 }
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-search .input-group .form-control,
 .page-sidebar .sidebar-search .input-group .form-control {
-  background-color: #364150;
+    background-color: #222;
   color: #4e5c6f;
 }
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-search .input-group .form-control::-moz-placeholder,
@@ -551,7 +551,7 @@ Page Header
 }
 .page-sidebar-closed .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-search.open .input-group, .page-sidebar-closed
 .page-sidebar .sidebar-search.open .input-group {
-  background-color: #364150;
+    background-color: #222;
 }
 .page-sidebar-closed .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-search.open .remove > i, .page-sidebar-closed
 .page-sidebar .sidebar-search.open .remove > i {
@@ -792,7 +792,7 @@ Page Footer
     /* Page footer */
   }
   .page-boxed .page-container {
-    background-color: #364150;
+      background-color: #222;
     border-left: 1px solid #3d4957;
     border-bottom: 1px solid #3d4957;
   }
@@ -881,7 +881,7 @@ Page Footer
     /* Top menu */
   }
   .page-header.navbar .top-menu {
-    background-color: #364150;
+      background-color: #222;
   }
   .page-header-fixed-mobile .page-header.navbar .top-menu {
     background-color: #2b3643;
@@ -900,7 +900,7 @@ Page Footer
 Boby
 ****/
 body {
-  background-color: #364150;
+    background-color: #222;
 }
 
 /****

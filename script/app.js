@@ -47,16 +47,20 @@ OpenPresentationApp.config(['$stateProvider', '$urlRouterProvider', '$sceDelegat
 
     $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://prod.api.pinandtucker.com']);
 
-    $urlRouterProvider.otherwise("/posts");  
+    $urlRouterProvider.otherwise("/dashboard");  
     
     $stateProvider
         .state('dashboard', {
             url: "/dashboard",
-            templateUrl: "script/modules/dashboard/views/index.html",            
-            data: {pageTitle:  'Dashboard'},
+            templateUrl: "script/modules/dashboard/views/dashboard.html",            
+           // params: {},
             controller: "DashboardController"
      
-        }) .state("login", {
+        })
+
+      
+
+         .state("login", {
             url: "/login",
             templateUrl: "script/modules/user/views/index.html", 
             data: {pageTitle:  'Login'},

@@ -7,14 +7,82 @@ angular.module('User').factory('UserService',
         service.currentUser = null;
 
         service.doLogin = function ( ) { 
+
             var daffered = service.$q.defer(); 
-            DataService.InvokeService("POST", "api/user/login", {'username':service.getCredentials().username, 'password':service.getCredentials().password} , function (response) {
+//alert(service.getCredentials().password);
+            DataService.InvokeService("POST", "api/user/login", {'username':service.getCredentials().username,'password':service.getCredentials().password}, function (response) {
+                console.log("success");
                     daffered.resolve(response);
+                    
+
+
             }, function (response) {
+                 console.log("error" + response);
+
                      daffered.reject(response);
-            });
+                     
+
+            }); 
+           // alert(daffered.promise['status']);
             return daffered.promise;
  
+        };
+
+        service.slideTitles = function(){
+              DataService.InvokeService('POST','api/user/slideList',{'userid':userid},function(response){
+console.log(response.data);
+return response.data;
+              },function(response){
+                console.log(response);
+return response;
+
+              });
+        };
+
+        service.doSignUp = function(){
+
+
+             var daffered = service.$q.defer(); 
+//alert(service.getCredentials().password);
+            DataService.InvokeService("POST", "api/user/signUp", {'username':service.getCredentials().username,'password':service.getCredentials().password,'email':service.getCredentials().email,'profilePic':service.getCredentials().profilePic}, function (response) {
+                console.log("success");
+                    daffered.resolve(response);
+                    
+
+
+            }, function (response) {
+                 console.log("error" + response);
+
+                     daffered.reject(response);
+                     
+
+            }); 
+           // alert(daffered.promise['status']);
+            return daffered.promise;
+
+
+        };
+
+        service.isUserExist = function(){
+
+            var daffered = service.$q.defer(); 
+//alert(service.getCredentials().username);
+            DataService.InvokeService("POST", "api/user/isUserExist", {'username':service.getCredentials().username}, function (response) {
+                console.log("success");
+                    daffered.resolve(response);
+                    
+
+
+            }, function (response) {
+                 console.log("error" + response);
+
+                     daffered.reject(response);
+                     
+
+            }); 
+           // alert(daffered.promise['status']);
+            return daffered.promise;
+
         };
   
         service.getCurrentUser = function (){
@@ -27,12 +95,14 @@ angular.module('User').factory('UserService',
 
      
 
-        service.setCredentials = function (username, password, isRememberMe) {
+        service.setCredentials = function (username, password, email, profilePic,isRememberMe) {
  
   
              var   currentUser =  {
                     username: username,
-                    password:  CryptoJS.MD5(password).toString(), 
+                    password: password,// CryptoJS.MD5(password).toString(), 
+                    email : email,
+                    profilePic:'',//profilePic,
                     isAuthenticated : false,
                     userData : null,
                     isRemember : isRememberMe

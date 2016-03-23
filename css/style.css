@@ -1,0 +1,232 @@
+
+
+div[draggable]{
+  cursor: pointer;
+
+}
+div.ui-draggable-dragging{
+  cursor: -webkit-grabbing;
+}
+
+div[resizable] {
+  position: absolute;
+    width: 50%;
+    height: 100%
+    min-width:20%;
+    min-height: 100%;
+}
+div[draggable]:hover{
+border:1px dashed rgba(62, 98, 230, 0.35);
+
+
+      
+}
+
+
+.select{
+  border:5px solid #1b91ff !important;
+  border-radius: 4px;
+}
+/*find span.handle in jquery-ui by class='ui-resizable-handle  */
+span.n-handle{
+    width: 8px; 
+    height: 8px;
+    border: 4px solid #1b91ff;
+    position: absolute;
+    background-color: #F9FAFB;
+    border-radius:5px;
+
+  display:none;
+}
+span.handle0{
+    /*  width:8px;
+    height: 8px;
+    border: 4px solid #1b91ff;
+    position: absolute;
+    background-color: #F9FAFB;    
+    border-radius:5px;*/
+    
+    left: 50%;
+    top: 99%;
+
+
+}
+
+ 
+
+
+span.handle1{
+     /*width: 8px; 
+    height: 8px;
+    border: 4px solid #1b91ff;
+    position: absolute;
+    background-color: #F9FAFB;
+    border-radius:5px;*/
+    left: 99%;
+    top: 50%;
+}
+
+span.handle2{
+     
+    left: 99%;
+    top: 99%;
+}
+
+
+.newSlide{
+ 
+
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    width: 50px !important;
+  
+    
+    
+}
+
+.newVerti{
+  position: absolute;
+	bottom: 0;
+	right:50%;
+  width: 50px !important;
+}
+
+/*@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);*/
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+#editSidebar{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(left,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 */
+
+}
+
+/*.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}*/
+
+.main-menu {
+background:#fbfbfb;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:250px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+/*color:#fff;
+background-color:#5fa2db;*/
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+/*@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}*/

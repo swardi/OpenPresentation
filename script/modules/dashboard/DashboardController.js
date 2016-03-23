@@ -1,10 +1,18 @@
 'use strict';
 
-OpenPresentationApp.controller('DashboardController', function($rootScope, $scope, $http, $timeout) {
-  //  $scope.$on('$viewContentLoaded', function() {   
-        // initialize core components
-       // Metronic.initAjax();
-  //  });
+OpenPresentationApp.controller('DashboardController', function($rootScope, $scope) {
+  
+    $scope.page.dashboard=true;
+
+//var user=$rootScope.us;
+
+
+
+
+  /* $scope.$on('$viewContentLoaded', function() {   
+     
+   });*/
+
 
     // set sidebar closed and body solid layout mode
     $rootScope.settings.layout.pageBodySolid = true;

@@ -1,0 +1,104 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>Test</title>
+
+<link rel="stylesheet" type="text/css" href="../css/reveal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/black.css"/>
+<link rel="stylesheet" type="text/css" href="../bower_components/font-awesome/css/font-awesome.min.css"/>
+ 
+
+<!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" /> -->
+<link rel="stylesheet" type="text/css" href="../bower_components/jquery-ui/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+
+ <script src="../bower_components/jquery/dist/jquery.js"></script>
+ <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+ <script src="../bower_components/angularjs/angular.js"></script>
+<!--  // <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script> -->
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/reveal/reveal.js"></script>
+
+ 
+<script src="../bower_components/ckeditor/ckeditor.js"></script>
+<script src="script/directives/resizable.js"></script>
+<script src="script/directives/draggable.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="script/modules/deck/deckCtrl.js"></script>
+<script type="text/javascript" src="script/modules/editor/editCtrl.js"></script>
+<script type="text/javascript" src="script/modules/deck/service.js"></script>
+<script type="text/javascript" src="script/modules/editor/service.js"></script>
+<script type="text/javascript" src="script/modules/partials/sidebarCtrl.js"></script>
+<!-- <script type="text/javascript" src="script/directives/ngDragabble.js"></script> -->
+<!-- <script type="text/javascript" src="script/directives/resizable.js"></script> -->
+<style>
+
+/*section > div > span.notch-e,section > div > span.notch-s{
+
+  position:absolute;
+  top:50%;
+left:98%;
+  width:10px;
+  height: 10px;
+
+
+}
+
+section > div > span.notch-e:hover,section > div > span.notch-s:hover{
+  background-color:skyblue;
+border:1px solid white;
+border-radius:50%;
+}*/
+
+
+.ui-iconSpot{
+  background-image:url(../bower_components/jquery-ui/images/ui-icons_309bbf_256x240.png);
+}
+
+/*
+div[resizable]:hover {
+   
+border:1px solid skyblue;
+
+  }*/
+  
+
+</style>
+</head>
+
+<body ng-keyup="keyHori($event.keyCode)" oncontextmenu="return false">
+	<div ng-show="sidebar" data-ng-include="'script/modules/partials/sidebar.html'" ng-controller="sidebarCtrl"> </div>
+	
+	<div ng-show="sidebar" > 	
+				<!-- <img src="../images/add.png" ng-click="addHoriSlide()"  alt="add"/> -->
+     <div class="newVerti " > 
+     <i class="fa fa-plus" ng-click=" alerts() "></i> 
+ 	 </div>
+<!-- class="newSlide" -->
+ 	  <div class="newSlide" ng-click="alerts() ">
+     <i class="fa fa-plus"></i> 
+ 	 </div>
+
+
+    </div>
+	 <!-- <div id="navigation">  
+      <a href="#/edit/osama/2">Home</a>
+      <a href="#/deck/osama/1">About</a>
+      </div> -->
+
+
+    
+
+	    <div class="reveal">
+        <div class="slides" ng-view>
+
+
+		</div>
+		</div>
+
+
+</body>
+</html>

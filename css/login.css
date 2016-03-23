@@ -3,7 +3,8 @@ Login page
 ***/
 /* logo page */
 .login {
-  background-color: #444 !important;
+   background-image: url("../images/green.jpg") !important;
+    background-color: #cccccc !important;
 }
 
 .login .logo {
